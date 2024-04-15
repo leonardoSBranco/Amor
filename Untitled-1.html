@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Amor</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Fundo preto */
+        }
+
+        #loveMessage {
+            font-size: 2em; /* Tamanho da fonte para "Eu te amo" */
+            color: #ff0000; /* Cor vermelha */
+            visibility: hidden; /* Inicialmente oculto */
+        }
+
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #ff0000; /* Botão vermelho */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="showButton" onclick="showLove()">Clique aqui</button>
+    <div id="loveMessage">Eu te amo</div>
+
+    <script>
+        function showLove() {
+            var loveMessage = document.getElementById('loveMessage');
+            var button = document.getElementById('showButton');
+            loveMessage.style.visibility = 'visible'; // Torna o texto "Eu te amo" visível
+            button.classList.add('hidden'); // Oculta o botão
+        }
+    </script>
+</body>
+</html>
